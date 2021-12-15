@@ -8,7 +8,8 @@ import { SelectNumbers } from '../../interfaces/select-numbers';
 })
 export class NumbersSelectionAreaComponent implements OnInit {
 
-  // @Input() selectedNums: number[]=[];
+
+  
   
   
 
@@ -23,18 +24,19 @@ export class NumbersSelectionAreaComponent implements OnInit {
     isNumberClicked:false
   }
 
+    @Input() numSelected: number[] = [];
 
   @Output() newNumSelect = new EventEmitter<number>();
   numSelect(){
-    const numSelected = this.button.num;
-    console.log(numSelected)
+    const pickedNumber = this.button.num;
+    console.log(pickedNumber)
     if (this.button.isNumberClicked === false ) {
       this.button.isNumberClicked = true;
     } else if (this.button.isNumberClicked === true) {
       this.button.isNumberClicked = false;
     }
-    this.newNumSelect.emit(numSelected);
-    console.log('Check emit : '+numSelected)
+    this.newNumSelect.emit(pickedNumber);
+    console.log('Check output : '+pickedNumber)
 
   }
  

@@ -13,10 +13,17 @@
   </head>
   <body>
     <app-header></app-header>
-    <!-- <app-bet-container [totalBetValue]="totalBetValue" [numSelected]="numSelected"></app-bet-container> -->
+    <div class="container" >
+      <div class="row" >
+         
+    <app-bet-container ></app-bet-container> 
     <app-numbers-selection-area  (newNumSelect)="updateNum($event)"></app-numbers-selection-area>
+    <div style="float:right">
     <app-selection-summary [numSelected]="numSelected"></app-selection-summary>
-
+  
+        </div>
+</div>
+</div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

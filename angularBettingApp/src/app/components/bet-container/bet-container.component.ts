@@ -21,7 +21,7 @@ export class BetContainerComponent implements OnInit {
   amountSelect(){
     const selectedValue = this.button.value;
     this.newBetValueSelected.emit(selectedValue);
-    console.log('Check emit : '+selectedValue)
+    console.log('Check output : '+selectedValue)
 
   }
 

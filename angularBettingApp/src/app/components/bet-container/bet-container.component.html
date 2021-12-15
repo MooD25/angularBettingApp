@@ -1,8 +1,8 @@
 <div class="container">
     <div class="row">
       <div class="col-9">
-        <button type="button" class="btn btn-warning" *ngFor="let button of buttons"   >${{button.value}}</button>
-        
+        <button type="button" class="btn btn-warning" *ngFor="let button of buttons" (click)="amountSelect()"   >${{button.value}}</button>
+       
     </div>
   
    
